@@ -794,3 +794,55 @@ textarea {
       }
     }
     
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .skill {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+    }
+    
+    .skill svg {
+      transform: rotate(-90deg);
+      width: 100%;
+      height: 100%;
+    }
+    
+    .skill .bg {
+      fill: none;
+      stroke: #333;
+      stroke-width: 15;
+    }
+    
+    .skill .progress {
+      fill: none;
+      stroke-linecap: round;
+      stroke-width: 15;
+    }
+    
+    .skill .percentage {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      font-weight: bold;
+      color: #00d9ff;
+    }
+    
+    .skill p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: white;
+    }
+    #skills {
+      scroll-margin-top: 100px; /* Adjust to match your header height */
+    }
+    
