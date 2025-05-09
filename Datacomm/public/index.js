@@ -36,3 +36,27 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+
+// --- Section Display Toggle ---
+const sectionLinks = document.querySelectorAll('.header__link');
+const sections = document.querySelectorAll('.page-section');
+
+function showSection(id) {
+  sections.forEach(section => {
+    section.style.display = section.id === id ? 'block' : 'none';
+  });
+}
+
+// Default: show only home
+showSection('home');
+
+sectionLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = link.getAttribute('data-target');
+    if (target) {
+      showSection(target);
+    }
+  });
+});
